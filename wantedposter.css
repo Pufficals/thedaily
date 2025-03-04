@@ -1,0 +1,90 @@
+/*Google Font*/
+#import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap');
+
+*{ 
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Smooch Sans', serif;
+}
+body{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+	background: #fff;
+	margin: 0;
+	}
+
+.container{
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	gap: 1rem;
+	padding: 20px;
+	background: #fff;
+	box-shadow: rgba(0,0,0,0,24) 0px 3px 8px;
+	border-radius: 5px;
+}
+
+.container .content{
+	width: 350px;
+}
+
+.content p{
+	line-clamp: 3;
+	-webkit-line-clamp: 3;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	color: #828282;
+	font-weight: 400;
+	font-size: 0.9rem;
+}
+
+#btn{
+	display: none;
+}
+
+label{
+	color: #fff;
+	font-size: 1.0rem;
+	background: #489c48;
+	padding: 10px;
+	text-decoration: none;
+	cursor: pointer;
+	font-weight: 500;
+	width: 100px;
+	text-align: center;
+}
+
+#btn:checked ~ .content p{
+	-webkit-line-clamp: unset;
+}
+
+.less{
+	display: none;
+}
+
+#btn:checked ~ .more{
+	display: none;
+}
+
+.img-container >*:nth-child(2) {
+	position: absolute;
+	left: 0;
+	top: -300%;
+	width: 100%;
+	transition: all 1s;
+}
+
+.img-container.capture >*:nth-child(2) {
+	top: 0%;
+}
+
+
+.img-container {
+	position: relative;
+	overflow: hidden;
+}
+
